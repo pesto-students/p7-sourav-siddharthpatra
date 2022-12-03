@@ -11,3 +11,18 @@ A web browser is basically a tool/software that helps us to browse the internet.
 The tree construction in a browser happens with tokens from the tokenization system where the DOCTYPE, start tag, endtag and all other identifers are presnet and then the DOM construction starts with the DOM object from the parser and then followed by the HTMl ending and closing tags and head and body atgs where all the nodes are attached to the body tag.
 
 Then when the browser encounters with any script tag then browser pauses all the other actions to download the script and once it is downloaded the rest of the tasks proceeds. If the HTML is paused then again it starts rendering.
+
+So what happens when we type a url into the address bar?
+
+The browser basically performs a particular action step by step to get the result into our page.
+
+1.When we type the url and press enter or hit it the URL gets devided into 4 parts basically using the browser Engine.
+    1. Sheme- It basically checks for the https or http. So basically it tells the broser to go with transport layer security or not.
+    2. Domain- The domain name is the address that we easily remember like google.com and in the dns of google we will get the ip address of it.
+    3. Path- This basically checksany additional path in the url like /user or /signin.
+    4. Resource- this basically is the final content that the browser needs to render like an HTML file.
+2. The browser gets the IP address of the URl by doing a DNS lookup. once it is able to get the IP in the DNS and then it starts with searching the IP in the internet using the network engine of the browser.
+3. After finding the IP then the browser initiates a TCP connection with the server and then the data exchange happens with the help of Packages and the rendering engine parses the HTML tree and the rendering tree is generated and also Javascript interpreter handles the JavaScript Code, where all the storage layer and Ui backend comes into picture in establishing the proper Render tree and the exact Javascript output.
+4. As now the connection is established the browser tries to follow HTTP protocol for getting and sending back data to nad from the server using this protocol.
+
+![alt text](./Drawing.png)
